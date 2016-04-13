@@ -24,8 +24,8 @@ int height;
 int width;
 double LIFEPROB = .35;
 bool PRINT = true;
-int demensions = 15;
-int MAX_LIVES = 10;
+int demensions = 1000;
+int MAX_LIVES = 100;
 
 
 void ClearScreen() //from http://www.cplusplus.com/forum/articles/10515/#msg49080
@@ -234,7 +234,7 @@ int main(int argc, char *argv[]) {
 
     time_used = (double) (((tvEnd.tv_sec * 1000000 + tvEnd.tv_usec) - (tvBegin.tv_sec * 1000000 + tvBegin.tv_usec)) /
                           1000000.0);
-    printf("UNParallel Game of Life\n");
+    printf("UNParallel %d * %d Game of Life\n", demensions, demensions);
     printf("Parrallel Run Time for %d lives: %f", count, time_used);
     printf("\nAverage Run Time per life for %d lives: %f", count, (time_used / count));
 

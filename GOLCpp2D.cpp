@@ -228,7 +228,7 @@ int main(int argc, char *argv[]){
     std::cout<<"\n******************************************\n";
 
     time_used = (double)(((tvEnd.tv_sec*1000000 + tvEnd.tv_usec) - (tvBegin.tv_sec*1000000 + tvBegin.tv_usec))/1000000.0);
-    printf("Game of Life 2D For %d threads\n", NUM_THREADS);
+    printf("%d * %d Game of Life 2D For %d threads\n", demensions, demensions, NUM_THREADS);
     printf("Parrallel Run Time for %d lives: %f",count, time_used);
     printf("\nAverage Run Time per life for %d lives: %f",count, (time_used/count));
 
