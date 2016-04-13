@@ -91,13 +91,48 @@ clean: CMakeFiles/GOFCpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/GOLCppReduction.dir
+
+# All Build rule for target.
+CMakeFiles/GOLCppReduction.dir/all:
+	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/depend
+	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ryanmcc/GameOfLifeCPP/build/CMakeFiles  2
+	@echo "Built target GOLCppReduction"
+.PHONY : CMakeFiles/GOLCppReduction.dir/all
+
+# Include target in all.
+all: CMakeFiles/GOLCppReduction.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/GOLCppReduction.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanmcc/GameOfLifeCPP/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GOLCppReduction.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ryanmcc/GameOfLifeCPP/build/CMakeFiles 0
+.PHONY : CMakeFiles/GOLCppReduction.dir/rule
+
+# Convenience name for target.
+GOLCppReduction: CMakeFiles/GOLCppReduction.dir/rule
+.PHONY : GOLCppReduction
+
+# clean rule for target.
+CMakeFiles/GOLCppReduction.dir/clean:
+	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/clean
+.PHONY : CMakeFiles/GOLCppReduction.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/GOLCppReduction.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/GameOfLifeCppContinuous.dir
 
 # All Build rule for target.
 CMakeFiles/GameOfLifeCppContinuous.dir/all:
 	$(MAKE) -f CMakeFiles/GameOfLifeCppContinuous.dir/build.make CMakeFiles/GameOfLifeCppContinuous.dir/depend
 	$(MAKE) -f CMakeFiles/GameOfLifeCppContinuous.dir/build.make CMakeFiles/GameOfLifeCppContinuous.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ryanmcc/GameOfLifeCPP/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ryanmcc/GameOfLifeCPP/build/CMakeFiles  3
 	@echo "Built target GameOfLifeCppContinuous"
 .PHONY : CMakeFiles/GameOfLifeCppContinuous.dir/all
 
@@ -132,7 +167,7 @@ clean: CMakeFiles/GameOfLifeCppContinuous.dir/clean
 CMakeFiles/unparallel.dir/all:
 	$(MAKE) -f CMakeFiles/unparallel.dir/build.make CMakeFiles/unparallel.dir/depend
 	$(MAKE) -f CMakeFiles/unparallel.dir/build.make CMakeFiles/unparallel.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ryanmcc/GameOfLifeCPP/build/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ryanmcc/GameOfLifeCPP/build/CMakeFiles  4
 	@echo "Built target unparallel"
 .PHONY : CMakeFiles/unparallel.dir/all
 

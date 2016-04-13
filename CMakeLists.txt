@@ -15,5 +15,9 @@ set(SOURCE_FILES2 unparallel.cpp)
 add_executable(unparallel ${SOURCE_FILES2} unparallel.cpp)
 
 
-set(SOURCE_FILES2 GOLCppReduction.cpp)
-add_executable(GOLCppReduction ${SOURCE_FILES2} GOLCppReduction.cpp)
+set(SOURCE_FILES3 GOLCppReduction.cpp)
+add_executable(GOLCppReduction ${SOURCE_FILES3} GOLCppReduction.cpp)
+
+
+set(SOURCE_FILES4 GOLCpp2D.cpp)
+add_executable(GOLCpp2D ${SOURCE_FILES4} GOLCpp2D.cpp)

@@ -115,6 +115,19 @@ GOFCpp/fast:
 .PHONY : GOFCpp/fast
 
 #=============================================================================
+# Target rules for targets named GOLCppReduction
+
+# Build rule for target.
+GOLCppReduction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GOLCppReduction
+.PHONY : GOLCppReduction
+
+# fast build rule for target.
+GOLCppReduction/fast:
+	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/build
+.PHONY : GOLCppReduction/fast
+
+#=============================================================================
 # Target rules for targets named GameOfLifeCppContinuous
 
 # Build rule for target.
@@ -156,6 +169,21 @@ GOFCpp.s:
 .PHONY : GOFCpp.s
 
 # target to build an object file
+GOLCppReduction.o:
+	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/GOLCppReduction.o
+.PHONY : GOLCppReduction.o
+
+# target to preprocess a source file
+GOLCppReduction.i:
+	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/GOLCppReduction.i
+.PHONY : GOLCppReduction.i
+
+# target to generate assembly for a file
+GOLCppReduction.s:
+	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/GOLCppReduction.s
+.PHONY : GOLCppReduction.s
+
+# target to build an object file
 continuous.o:
 	$(MAKE) -f CMakeFiles/GameOfLifeCppContinuous.dir/build.make CMakeFiles/GameOfLifeCppContinuous.dir/continuous.o
 .PHONY : continuous.o
@@ -192,6 +220,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... GOFCpp"
+	@echo "... GOLCppReduction"
 	@echo "... GameOfLifeCppContinuous"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
@@ -199,6 +228,9 @@ help:
 	@echo "... GOFCpp.o"
 	@echo "... GOFCpp.i"
 	@echo "... GOFCpp.s"
+	@echo "... GOLCppReduction.o"
+	@echo "... GOLCppReduction.i"
+	@echo "... GOLCppReduction.s"
 	@echo "... continuous.o"
 	@echo "... continuous.i"
 	@echo "... continuous.s"

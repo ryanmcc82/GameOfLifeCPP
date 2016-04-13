@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/ryanmcc/GameOfLifeCPP/GOFCpp.cpp
-source_file.h
-/home/ryanmcc/GameOfLifeCPP/source_file.h
+/home/ryanmcc/GameOfLifeCPP/GOFCpp.h
+
+/home/ryanmcc/GameOfLifeCPP/continuous.cpp
+GOFCpp.h
+/home/ryanmcc/GameOfLifeCPP/GOFCpp.h
 stdbool.h
 -
 stdio.h
@@ -19,6 +21,4 @@ unistd.h
 -
 sys/time.h
 -
-
-/home/ryanmcc/GameOfLifeCPP/source_file.h
 
