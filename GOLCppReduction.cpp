@@ -26,6 +26,7 @@ double LIFEPROB = .35;
 bool PRINT = false;
 int demensions = 1000;
 int MAX_LIVES = 100;
+int NUM_THREADS;
 
 void ClearScreen() //from http://www.cplusplus.com/forum/articles/10515/#msg49080
 {
@@ -124,7 +125,7 @@ bool nextLive(bool **old, bool **newlife){
 //    {
 //#pragma omp parallel shared(old, newlife, chunk) private(i,j,count) num_threads(4)
 #pragma omp parallel for  shared(old, newlife, chunk) private(i,j,count) \
-  num_threads(4) schedule(guided,chunk) reduction(*:isDead)
+  num_threads(NUM_THREADS) schedule(guided,chunk) reduction(*:isDead)
         for (i = 1; i < height - 1; i++) {
             for ( int j = 1; j < width - 1; j++) {
                 count = getNeighborhoodVallue(old, i, j);
@@ -193,6 +194,9 @@ int main(int argc, char *argv[]){
     struct timeval tvBegin, tvEnd, tvDiff;
     double time_used;
 
+    std::cout << "please enter desired nuber of Threads : ";
+    std::cin >> NUM_THREADS;
+
 
     bool **arrayA = create2DArrayB(height, width);        //[height][width];
     bool **arrayB = create2DArrayB(height, width);        //[height][width];
@@ -221,7 +225,7 @@ int main(int argc, char *argv[]){
     std::cout<<"\n******************************************\n";
 
     time_used = (double)(((tvEnd.tv_sec*1000000 + tvEnd.tv_usec) - (tvBegin.tv_sec*1000000 + tvBegin.tv_usec))/1000000.0);
-    printf("Game of Life Reduction For loop\n");
+    printf("Game of Life Reduction For %d threads\n", NUM_THREADS);
     printf("Parrallel Run Time for %d lives: %f",count, time_used);
     printf("\nAverage Run Time per life for %d lives: %f",count, (time_used/count));
 
