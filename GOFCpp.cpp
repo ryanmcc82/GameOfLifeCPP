@@ -15,10 +15,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <curses.h>
-#include <term.h>
-#include <sys/time.h>
-#include <omp.h>
 #include <sys/time.h>
 
 #define CHUNKSIZE 1
@@ -124,8 +120,8 @@ void nextLive(bool **old, bool **newlife){
     chunk = CHUNKSIZE;
 //#pragma omp parallel shared(old, newlife, chunk) private(i,j,count)
 //    {
-
-#pragma omp parallel for shared(old, newlife, chunk) private(i,j,count) schedule(guided,chunk)
+#pragma omp parallel num_threads(4)
+#pragma omp for shared(old, newlife, chunk) private(i,j,count) schedule(guided,chunk)
         for (i = 1; i < height - 1; i++) {
             for ( int j = 1; j < width - 1; j++) {
                 count = getNeighborhoodVallue(old, i, j);
