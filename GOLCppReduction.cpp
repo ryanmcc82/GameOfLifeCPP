@@ -114,44 +114,33 @@ int getNeighborhoodVallue(bool **array, int row, int col){
     return count;
 }
 
-void nextLive(bool **old, bool **newlife){
+bool nextLive(bool **old, bool **newlife){
 
     int i, j, count, chunk;
     chunk = CHUNKSIZE;
+    int isDead = 1;
 //#pragma omp parallel shared(old, newlife, chunk) private(i,j,count)
 //    {
-#pragma omp parallel shared(old, newlife, chunk) private(i,j,count) num_threads(4)
-#pragma omp for  schedule(guided,chunk)
+//#pragma omp parallel shared(old, newlife, chunk) private(i,j,count) num_threads(4)
+#pragma omp parallel for  shared(old, newlife, chunk) private(i,j,count) \
+  num_threads(4) schedule(guided,chunk) reduction(*:isDead)
         for (i = 1; i < height - 1; i++) {
             for ( int j = 1; j < width - 1; j++) {
                 count = getNeighborhoodVallue(old, i, j);
 
                 if (old[i][j]) {
                     newlife[i][j] = (count == 2 || count == 3) ? true : false;
+                    isDead = isDead * ((newlife[i][j]) ? 1 : 0);
                 }
                 else {
                     newlife[i][j] = (count == 3);
+                    isDead = isDead * ((newlife[i][j]) ? 0 : 1);
                 }
 
             }
         }
+    return isDead == 0;//if isDead is zero then at least one cell has changed.
     }
-//}
-
-bool equ(bool **old, bool **newlife){
-    int i, j;//count?
-    bool result = true;
-    for( i = 0;i<height; i++){
-        for(j = 0; j < width; j++){
-
-            if(old[i][j] != newlife[i][j]){
-                result = false;
-            }
-
-        }
-    }
-    return result;
-}
 
 bool** create2DArray(int r, int c){
     int i;
@@ -211,17 +200,18 @@ int main(int argc, char *argv[]){
 
     initArray(arrayA);
     print(arrayA);
+    bool alive = true;
 
     gettimeofday(&tvBegin, NULL);
     do{
         nextLive(arrayA,arrayB);
         print(arrayB);
 
-        nextLive(arrayB,arrayA);
+        alive = nextLive(arrayB,arrayA);
         print(arrayA);
         count++;
     }
-    while(!equ(arrayA, arrayB) && count < MAX_LIVES );
+    while(alive && count < MAX_LIVES );
 
     gettimeofday(&tvEnd, NULL);
     time_used = (tvEnd.tv_sec - tvBegin.tv_sec);
