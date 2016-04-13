@@ -23,7 +23,7 @@
 int height;
 int width;
 double LIFEPROB = .35;
-bool PRINT = true;
+bool PRINT = false;
 int demensions = 1000;
 int MAX_LIVES = 100;
 
