@@ -2,10 +2,11 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
     <generated>
+      <config projectName="GameOfLifeCppContinuous" targetName="GOFCpp" />
+      <config projectName="GameOfLifeCppContinuous" targetName="GOLCpp2D" />
       <config projectName="GameOfLifeCppContinuous" targetName="GOLCppReduction" />
       <config projectName="GameOfLifeCppContinuous" targetName="GameOfLifeCppContinuous" />
       <config projectName="GameOfLifeCpp" targetName="GameOfLifeCpp" />
-      <config projectName="GameOfLifeCppContinuous" targetName="GOFCpp" />
       <config projectName="GameOfLifeCppContinuous" targetName="unparallel" />
     </generated>
   </component>
@@ -16,8 +17,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e43ed59a-a8cb-420c-86ef-2ee1e3c09323" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GOLCpp2D.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GOFCpp.cpp" afterPath="$PROJECT_DIR$/GOFCpp.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GOLCppReduction.cpp" afterPath="$PROJECT_DIR$/GOLCppReduction.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unparallel.cpp" afterPath="$PROJECT_DIR$/unparallel.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GameOfLifeCpp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -52,8 +57,10 @@
         <entry file="file://$PROJECT_DIR$/unparallel.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-              <folding />
+              <caret line="232" column="64" selection-start-line="232" selection-start-column="64" selection-end-line="232" selection-end-column="64" />
+              <folding>
+                <element signature="e#634#654#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +69,22 @@
         <entry file="file://$PROJECT_DIR$/continuous.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-              <folding />
+              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="38" />
+              <folding>
+                <element signature="e#630#650#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GOLCpp2D.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GOLCpp2D.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.19031142">
+              <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+              <folding>
+                <element signature="e#635#654#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/GOFCpp.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="67" selection-start-line="122" selection-start-column="67" selection-end-line="122" selection-end-column="67" />
+              <caret line="231" column="64" selection-start-line="231" selection-start-column="64" selection-end-line="231" selection-end-column="64" />
               <folding>
                 <element signature="e#635#655#0" expanded="true" />
               </folding>
@@ -80,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GOLCppReduction.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GOLCppReduction.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GOLCppReduction.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9653979">
-              <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="223" column="12" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
               <folding>
                 <element signature="e#635#655#0" expanded="true" />
               </folding>
@@ -102,10 +123,11 @@
       <list>
         <option value="$PROJECT_DIR$/source_file.cpp" />
         <option value="$PROJECT_DIR$/continuous.cpp" />
-        <option value="$PROJECT_DIR$/unparallel.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/GOFCpp.cpp" />
         <option value="$PROJECT_DIR$/GOLCppReduction.cpp" />
+        <option value="$PROJECT_DIR$/unparallel.cpp" />
+        <option value="$PROJECT_DIR$/GOLCpp2D.cpp" />
       </list>
     </option>
   </component>
@@ -181,7 +203,7 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GOLCppReduction">
+  <component name="RunManager" selected="Application.GOLCpp2D">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="GameOfLifeCpp" TARGET_NAME="GameOfLifeCpp" CONFIG_NAME="Debug">
       <envs />
       <method />
@@ -215,12 +237,17 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
+    <configuration default="false" name="GOLCpp2D" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="GameOfLifeCppContinuous" TARGET_NAME="GOLCpp2D" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="GameOfLifeCppContinuous" RUN_TARGET_NAME="GOLCpp2D">
+      <envs />
+      <method />
+    </configuration>
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.GameOfLifeCppContinuous" />
       <item index="2" class="java.lang.String" itemvalue="Application.GOFCpp" />
       <item index="3" class="java.lang.String" itemvalue="Application.unparallel" />
       <item index="4" class="java.lang.String" itemvalue="Application.GOLCppReduction" />
+      <item index="5" class="java.lang.String" itemvalue="Application.GOLCpp2D" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -240,16 +267,16 @@
     <frame x="65" y="52" width="1355" height="1028" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1403904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1403904" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3359116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3281768" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19894895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19894895" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -308,7 +335,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="245" column="0" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#634#654#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -316,7 +345,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -342,7 +373,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="221" column="16" selection-start-line="221" selection-start-column="16" selection-end-line="221" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#634#654#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -350,7 +383,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -366,7 +401,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
-          <folding />
+          <folding>
+            <element signature="e#634#654#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -374,7 +411,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -407,7 +446,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -430,7 +471,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -453,7 +496,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -476,7 +521,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -497,23 +544,17 @@
     <entry file="file://$PROJECT_DIR$/continuous.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unparallel.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="38" />
+          <folding>
+            <element signature="e#630#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -521,19 +562,39 @@
     <entry file="file://$PROJECT_DIR$/GOFCpp.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="67" selection-start-line="122" selection-start-column="67" selection-end-line="122" selection-end-column="67" />
+          <caret line="231" column="64" selection-start-line="231" selection-start-column="64" selection-end-line="231" selection-end-column="64" />
           <folding>
             <element signature="e#635#655#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unparallel.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="232" column="64" selection-start-line="232" selection-start-column="64" selection-end-line="232" selection-end-column="64" />
+          <folding>
+            <element signature="e#634#654#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GOLCppReduction.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9653979">
-          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="223" column="12" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
           <folding>
             <element signature="e#635#655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GOLCpp2D.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19031142">
+          <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+          <folding>
+            <element signature="e#635#654#0" expanded="true" />
           </folding>
         </state>
       </provider>

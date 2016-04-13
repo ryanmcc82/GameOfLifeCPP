@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/time.h>
+#include <iostream>
 
 #define CHUNKSIZE 1
 
@@ -217,10 +218,10 @@ int main(int argc, char *argv[]){
     time_used = (tvEnd.tv_sec - tvBegin.tv_sec);
 
     timeval_subtract(&tvDiff, &tvEnd, &tvBegin);
-    printf("%ld.%06ld\n", tvDiff.tv_sec, tvDiff.tv_usec);
+    std::cout<<"\n******************************************\n";
 
     time_used = (double)(((tvEnd.tv_sec*1000000 + tvEnd.tv_usec) - (tvBegin.tv_sec*1000000 + tvBegin.tv_usec))/1000000.0);
-    printf("Parallel Game of Life For loop\n");
+    printf("Game of Life Reduction For loop\n");
     printf("Parrallel Run Time for %d lives: %f",count, time_used);
     printf("\nAverage Run Time per life for %d lives: %f",count, (time_used/count));
 
