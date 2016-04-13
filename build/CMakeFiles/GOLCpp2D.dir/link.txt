@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -fopenmp    CMakeFiles/GOLCpp2D.dir/GOLCpp2D.o  -o GOLCpp2D -rdynamic 

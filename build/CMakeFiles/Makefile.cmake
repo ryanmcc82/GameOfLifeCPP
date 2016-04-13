@@ -40,6 +40,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/GOFCpp.dir/DependInfo.cmake"
+  "CMakeFiles/GOLCpp2D.dir/DependInfo.cmake"
   "CMakeFiles/GOLCppReduction.dir/DependInfo.cmake"
   "CMakeFiles/GameOfLifeCppContinuous.dir/DependInfo.cmake"
   "CMakeFiles/unparallel.dir/DependInfo.cmake"

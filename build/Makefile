@@ -115,6 +115,19 @@ GOFCpp/fast:
 .PHONY : GOFCpp/fast
 
 #=============================================================================
+# Target rules for targets named GOLCpp2D
+
+# Build rule for target.
+GOLCpp2D: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GOLCpp2D
+.PHONY : GOLCpp2D
+
+# fast build rule for target.
+GOLCpp2D/fast:
+	$(MAKE) -f CMakeFiles/GOLCpp2D.dir/build.make CMakeFiles/GOLCpp2D.dir/build
+.PHONY : GOLCpp2D/fast
+
+#=============================================================================
 # Target rules for targets named GOLCppReduction
 
 # Build rule for target.
@@ -169,6 +182,21 @@ GOFCpp.s:
 .PHONY : GOFCpp.s
 
 # target to build an object file
+GOLCpp2D.o:
+	$(MAKE) -f CMakeFiles/GOLCpp2D.dir/build.make CMakeFiles/GOLCpp2D.dir/GOLCpp2D.o
+.PHONY : GOLCpp2D.o
+
+# target to preprocess a source file
+GOLCpp2D.i:
+	$(MAKE) -f CMakeFiles/GOLCpp2D.dir/build.make CMakeFiles/GOLCpp2D.dir/GOLCpp2D.i
+.PHONY : GOLCpp2D.i
+
+# target to generate assembly for a file
+GOLCpp2D.s:
+	$(MAKE) -f CMakeFiles/GOLCpp2D.dir/build.make CMakeFiles/GOLCpp2D.dir/GOLCpp2D.s
+.PHONY : GOLCpp2D.s
+
+# target to build an object file
 GOLCppReduction.o:
 	$(MAKE) -f CMakeFiles/GOLCppReduction.dir/build.make CMakeFiles/GOLCppReduction.dir/GOLCppReduction.o
 .PHONY : GOLCppReduction.o
@@ -220,6 +248,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... GOFCpp"
+	@echo "... GOLCpp2D"
 	@echo "... GOLCppReduction"
 	@echo "... GameOfLifeCppContinuous"
 	@echo "... edit_cache"
@@ -228,6 +257,9 @@ help:
 	@echo "... GOFCpp.o"
 	@echo "... GOFCpp.i"
 	@echo "... GOFCpp.s"
+	@echo "... GOLCpp2D.o"
+	@echo "... GOLCpp2D.i"
+	@echo "... GOLCpp2D.s"
 	@echo "... GOLCppReduction.o"
 	@echo "... GOLCppReduction.i"
 	@echo "... GOLCppReduction.s"

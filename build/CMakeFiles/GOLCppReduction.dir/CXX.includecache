@@ -19,6 +19,8 @@ unistd.h
 -
 sys/time.h
 -
+iostream
+-
 
 /home/ryanmcc/GameOfLifeCPP/source_file.h
 
