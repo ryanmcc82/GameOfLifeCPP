@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -fopenmp    CMakeFiles/GOLCppReduction.dir/GOLCppReduction.o  -o GOLCppReduction -rdynamic 
