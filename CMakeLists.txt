@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.3)
+cmake_minimum_required(VERSION 3.2)
 project(GameOfLifeCppContinuous)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fopenmp")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 
 set(SOURCE_FILES continuous.cpp)
 add_executable(GameOfLifeCppContinuous ${SOURCE_FILES} continuous.cpp)

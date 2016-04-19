@@ -17,6 +17,8 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <iostream>
+#include <utility>
+using namespace std;
 
 #define CHUNKSIZE 5
 
@@ -194,10 +196,9 @@ int timeval_subtract(struct timeval *result, struct timeval *t2, struct timeval 
     return (diff<0);
 }
 
-
-int main(int argc, char *argv[]) {
-    height = demensions;
-    width = demensions;
+pair<double, int> testRun(int fdemensions){
+    height = fdemensions;
+    width = fdemensions;
 
     struct timeval tvBegin, tvEnd, tvDiff;
     double time_used;
@@ -227,17 +228,47 @@ int main(int argc, char *argv[]) {
     while (!equ(arrayA, arrayB) && count < MAX_LIVES);
 
     gettimeofday(&tvEnd, NULL);
-    time_used = (tvEnd.tv_sec - tvBegin.tv_sec);
 
     timeval_subtract(&tvDiff, &tvEnd, &tvBegin);
-    std::cout<<"\n******************************************\n";
 
     time_used = (double) (((tvEnd.tv_sec * 1000000 + tvEnd.tv_usec) - (tvBegin.tv_sec * 1000000 + tvBegin.tv_usec)) /
                           1000000.0);
-    printf("UNParallel %d * %d Game of Life\n", demensions, demensions);
-    printf("Parrallel Run Time for %d lives: %f", count, time_used);
-    printf("\nAverage Run Time per life for %d lives: %f", count, (time_used / count));
 
+    pair<double, int> result(time_used, count);
+    return result;
+}
+
+
+int main(int argc, char *argv[]) {
+    int test, actualTest = 0;
+    double totalTime;
+    std::cout << "please enter desired number of Test : ";
+    std::cin >> test;
+    int temp_demensions;
+    std::cout << "please enter desired size or 0: ";
+    std::cin >> temp_demensions;
+    if(temp_demensions != 0){
+        demensions = temp_demensions;
+    }
+
+    pair<double, int> result = testRun(demensions);
+    cout<< (result.first/result.second);
+    for(int i = 0; i < test; i++){
+        result = testRun(demensions);
+        if (result.second == MAX_LIVES){
+            ++actualTest;
+            totalTime += result.first;
+        } else{
+            std::cout << "Early Death\n";
+        }
+    }
+
+    double ave_time_used = totalTime/(actualTest * MAX_LIVES);
+    std::cout<<"\n******************************************\n";
+
+    printf("UNParallel %d * %d Game of Life\n", demensions, demensions);
+    printf("Run Time for %d test of %d lives", actualTest,MAX_LIVES);
+    printf("\nAverage Run Time per life for %d lives: %f",MAX_LIVES, (ave_time_used));
 
     return 0;
 }
