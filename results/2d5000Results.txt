@@ -1,0 +1,9 @@
+please enter desired nuber of Threads : 
+******************************************
+5000 * 5000 Game of Life 2D For 20 threads
+Parrallel Run Time for 100 lives: 17.188219
+Average Run Time per life for 100 lives: 0.171882please enter desired nuber of Threads : 
+******************************************
+5000 * 5000 Game of Life 2D For 20 threads
+Parrallel Run Time for 100 lives: 19.461474
+Average Run Time per life for 100 lives: 0.194615

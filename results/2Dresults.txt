@@ -1,0 +1,29 @@
+
+******************************************
+Game of Life 2D For loop
+Parrallel Run Time for 100 lives: 2.235633
+Average Run Time per life for 100 lives: 0.022356
+******************************************
+Game of Life 2D For loop
+Parrallel Run Time for 100 lives: 2.236333
+Average Run Time per life for 100 lives: 0.022363please enter desired nuber of Threads : 
+******************************************
+Game of Life 2D For 2 threads
+Parrallel Run Time for 100 lives: 4.305839
+Average Run Time per life for 100 lives: 0.043058please enter desired nuber of Threads : 
+******************************************
+Game of Life 2D For 4 threads
+Parrallel Run Time for 100 lives: 2.208920
+Average Run Time per life for 100 lives: 0.022089please enter desired nuber of Threads : 
+******************************************
+Game of Life 2D For 4 threads
+Parrallel Run Time for 100 lives: 2.206070
+Average Run Time per life for 100 lives: 0.022061please enter desired nuber of Threads : 
+******************************************
+Game of Life 2D For 8 threads
+Parrallel Run Time for 100 lives: 1.251022
+Average Run Time per life for 100 lives: 0.012510please enter desired nuber of Threads : 
+******************************************
+Game of Life 2D For 16 threads
+Parrallel Run Time for 100 lives: 0.674575
+Average Run Time per life for 100 lives: 0.006746

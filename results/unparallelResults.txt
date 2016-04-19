@@ -1,0 +1,9 @@
+
+******************************************
+UNParallel 1000 * 1000 Game of Life
+Parrallel Run Time for 100 lives: 4.895383
+Average Run Time per life for 100 lives: 0.048954
+******************************************
+UNParallel 1000 * 1000 Game of Life
+Parrallel Run Time for 100 lives: 4.697757
+Average Run Time per life for 100 lives: 0.046978
