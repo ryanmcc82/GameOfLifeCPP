@@ -242,7 +242,7 @@ int main(int argc, char *argv[]){
 
     std::cout<<"\n******************************************\n";
     printf("%d * %d Matrix * Vector for %d threads\n", demensions, demensions, NUM_THREADS);
-    printf("Parrallel Run Time for %d test of", actualTest);
+    printf("Syncronous Run Time for %d test", actualTest);
     printf("\nAverage Run Time per operation: %f\n", (ave_time_used));
     std::cout<<"\n******************************************\n";
 //////////////////////////////////////////////////////////////////////////////////////////
