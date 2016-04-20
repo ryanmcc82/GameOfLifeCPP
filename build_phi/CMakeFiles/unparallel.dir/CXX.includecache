@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ryanmcc/GameOfLifeCPP/unparallel.cpp
+unparallel.h
+/home/ryanmcc/GameOfLifeCPP/unparallel.h
+stdbool.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/time.h
+-
+iostream
+-
+utility
+-
+fstream
+-
+
+/home/ryanmcc/GameOfLifeCPP/unparallel.h
+

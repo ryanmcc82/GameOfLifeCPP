@@ -1,0 +1,7 @@
+th="/home/ryanmcc/GameOfLifeCPP/results/phitestGoL2DResults.txt"
+twoDem="./GOLCpp2D"
+tests="10"
+threads="16"
+size="100"
+         
+micnativeloadex ./GOLCpp2D '"16 10 200 /home/ryanmcc/GameOfLifeCPP/results/phitestGoL2DResults.txt"'

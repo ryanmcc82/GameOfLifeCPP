@@ -1,0 +1,3 @@
+/home/ryanmcc/GameOfLifeCPP/build_phi/CMakeFiles/GOLCpp2D.dir
+/home/ryanmcc/GameOfLifeCPP/build_phi/CMakeFiles/GOLCppReduction.dir
+/home/ryanmcc/GameOfLifeCPP/build_phi/CMakeFiles/unparallel.dir

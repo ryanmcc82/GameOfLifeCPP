@@ -1,0 +1,1 @@
+/share/apps/tools/intel/composer_xe_2015.3.187/bin/intel64/icpc    -mmic -openmp    CMakeFiles/GOLCppReduction.dir/GOLCppReduction.o  -o GOLCppReduction -rdynamic 
