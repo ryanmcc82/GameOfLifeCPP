@@ -249,7 +249,7 @@ int main(int argc, char *argv[]){
     touchFile(filename.c_str());
 
     std::cout<<"\n******************************************\n";
-    printf("%d * %d Matrix * Vector for %d threads\n", demensions, demensions, NUM_THREADS);
+    printf("%d * %d Matrix * Vector 2D for %d threads\n", demensions, demensions, NUM_THREADS);
     printf("Parrallel Run Time for %d test", actualTest);
     printf("\nAverage Run Time per operation: %f\n", (ave_time_used));
     std::cout<<"\n******************************************\n";
