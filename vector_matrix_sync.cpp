@@ -231,7 +231,6 @@ int main(int argc, char *argv[]){
         result = testRun();
             ++actualTest;
             totalTime += result;
-        cout<<"test"<<endl;
 
     }
 
