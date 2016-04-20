@@ -1,0 +1,6 @@
+Testing...
+******************************************
+Name,	TestRuns,	Thread #,	Demensions,	 AverageTime,
+Vector,	2,	4,	100,	0.005848, 
+Vector,	2,	2,	100,	0.000082, 
+Vector,	3,	4,	500,	0.208617, 
