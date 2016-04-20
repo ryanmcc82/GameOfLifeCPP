@@ -18,6 +18,8 @@
 #include <sys/time.h>
 #include <iostream>
 #include <utility>
+#include <fstream>
+
 using namespace std;
 
 #define CHUNKSIZE 5
@@ -264,11 +266,29 @@ int main(int argc, char *argv[]) {
     }
 
     double ave_time_used = totalTime/(actualTest * MAX_LIVES);
+
+    std::ofstream outfile;
+    outfile.open("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoLSyncResults.txt", std::ios_base::app);
+    outfile << "Testing...\n******************************************\n";
+    outfile.close();
+
     std::cout<<"\n******************************************\n";
 
     printf("UNParallel %d * %d Game of Life\n", demensions, demensions);
     printf("Run Time for %d test of %d lives", actualTest,MAX_LIVES);
-    printf("\nAverage Run Time per life for %d lives: %f",MAX_LIVES, (ave_time_used));
+    printf("\nAverage Run Time per life for %d lives: %f\n",MAX_LIVES, (ave_time_used));
+    std::cout<<"\n******************************************\n";
+
+    FILE * pFile;
+
+    pFile = fopen ("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoLSyncResults.txt","a");
+
+    fprintf(pFile, "%d * %d Game of Life Synchronous For %d threads\n", demensions, demensions, 1);
+    fprintf(pFile,"Name,\tTestRun,\tThread #,\tDemensions,\t AverageTime,\n");
+    fprintf(pFile,"GoSync,\t%d,\t%d,\t%d,\t%f, \n",actualTest ,1 ,demensions, (ave_time_used));
+
+
+    fclose (pFile);
 
     return 0;
 }

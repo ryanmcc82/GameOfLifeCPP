@@ -18,6 +18,8 @@
 #include <sys/time.h>
 #include <iostream>
 #include <utility>
+#include <fstream>
+
 using namespace std;
 
 #define CHUNKSIZE 1
@@ -234,6 +236,12 @@ int main(int argc, char *argv[]){
     std::cin >> NUM_THREADS;
     std::cout << "please enter desired nuber of Test : ";
     std::cin >> test;
+    int temp_demensions;
+    std::cout << "please enter desired size or 0: ";
+    std::cin >> temp_demensions;
+    if(temp_demensions != 0){
+        demensions = temp_demensions;
+    }
 
     pair<double, int> result = testRun();
     cout<< (result.first/result.second);
@@ -248,54 +256,36 @@ int main(int argc, char *argv[]){
     }
 
     double ave_time_used = totalTime/(actualTest * MAX_LIVES);
+
+
+    std::ofstream outfile;
+    outfile.open("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoL1DResults.txt", std::ios_base::app);
+    outfile << "Testing...\n******************************************\n";
+    outfile.close();
+
+
+
     std::cout<<"\n******************************************\n";
 
-    printf("%d * %d Game of Life 2D For %d threads\n", demensions, demensions, NUM_THREADS);
+    printf("%d * %d Game of Life 1D For %d threads\n", demensions, demensions, NUM_THREADS);
     printf("Parrallel Run Time for %d test of %d lives", actualTest,MAX_LIVES);
-    printf("\nAverage Run Time per life for %d lives: %f",MAX_LIVES, (ave_time_used));
+    printf("\nAverage Run Time per life for %d lives: %f\n",MAX_LIVES, (ave_time_used));
+
+
+    std::cout<<"\n******************************************\n";
+//////////////////////////////////////////////////////////////////////////////////////////
+    FILE * pFile;
+
+    pFile = fopen ("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoL1DResults.txt","a");
+
+    fprintf(pFile, "%d * %d Game of Life 1D For %d threads\n", demensions, demensions, NUM_THREADS);
+    fprintf(pFile,"Name,\tTestRun,\tThread #,\tDemensions,\t AverageTime,\n");
+
+    fprintf(pFile,"GoL1D,\t%d,\t%d,\t%d,\t%f, \n",actualTest ,NUM_THREADS ,demensions, (ave_time_used));
+
+
+    fclose (pFile);
 
     return 0;
 
-//    height = demensions;
-//    width = demensions;
-//
-//    struct timeval tvBegin, tvEnd, tvDiff;
-//    double time_used;
-//
-//    std::cout << "please enter desired nuber of Threads : ";
-//    std::cin >> NUM_THREADS;
-//
-//
-//    bool **arrayA = create2DArrayB(height, width);        //[height][width];
-//    bool **arrayB = create2DArrayB(height, width);        //[height][width];
-//    int count = 0;
-//
-//
-//    initArray(arrayA);
-//    print(arrayA);
-//    bool alive = true;
-//
-//    gettimeofday(&tvBegin, NULL);
-//    do{
-//        nextLive(arrayA,arrayB);
-//        print(arrayB);
-//
-//        alive = nextLive(arrayB,arrayA);
-//        print(arrayA);
-//        count++;
-//    }
-//    while(alive && count < MAX_LIVES );
-//
-//    gettimeofday(&tvEnd, NULL);
-//    time_used = (tvEnd.tv_sec - tvBegin.tv_sec);
-//
-//    timeval_subtract(&tvDiff, &tvEnd, &tvBegin);
-//    std::cout<<"\n******************************************\n";
-//
-//    time_used = (double)(((tvEnd.tv_sec*1000000 + tvEnd.tv_usec) - (tvBegin.tv_sec*1000000 + tvBegin.tv_usec))/1000000.0);
-//    printf("Game of Life Reduction For %d threads\n", NUM_THREADS);
-//    printf("Parrallel Run Time for %d lives: %f",count, time_used);
-//    printf("\nAverage Run Time per life for %d lives: %f",count, (time_used/count));
-//
-//    return 0;
 }

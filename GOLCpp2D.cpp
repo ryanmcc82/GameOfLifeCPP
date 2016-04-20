@@ -20,6 +20,7 @@
 #include <utility>
 using namespace std;
 #include <omp.h>
+#include <fstream>
 
 #define CHUNKSIZE 1
 
@@ -233,6 +234,12 @@ int main(int argc, char *argv[]){
     std::cin >> NUM_THREADS;
     std::cout << "please enter desired nuber of Test : ";
     std::cin >> test;
+    int temp_demensions;
+    std::cout << "please enter desired size or 0: ";
+    std::cin >> temp_demensions;
+    if(temp_demensions != 0){
+        demensions = temp_demensions;
+    }
 
     pair<double, int> result = testRun();
     for(int i = 0; i < test; i++){
@@ -246,11 +253,32 @@ int main(int argc, char *argv[]){
     }
 
     double ave_time_used = totalTime/(actualTest * MAX_LIVES);
+
+
+    std::ofstream outfile;
+    outfile.open("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoL2DResults.txt", std::ios_base::app);
+    outfile << "Testing...\n******************************************\n";
+    outfile.close();
+
     std::cout<<"\n******************************************\n";
 
     printf("%d * %d Game of Life 2D For %d threads\n", demensions, demensions, NUM_THREADS);
     printf("Parrallel Run Time for %d test of %d lives", actualTest,MAX_LIVES);
-    printf("\nAverage Run Time per life for %d lives: %f",MAX_LIVES, (ave_time_used));
+    printf("\nAverage Run Time per life for %d lives: %f\n",MAX_LIVES, (ave_time_used));
+
+    std::cout<<"\n******************************************\n";
+
+    FILE * pFile;
+
+    pFile = fopen ("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoL2DResults.txt","a");
+
+    fprintf(pFile, "%d * %d Game of Life 2D For %d threads\n", demensions, demensions, NUM_THREADS);
+    fprintf(pFile,"Name,\tTestRun,\tThread #,\tDemensions,\t AverageTime,\n");
+
+    fprintf(pFile,"GoL2D,\t%d,\t%d,\t%d,\t%f, \n",actualTest ,NUM_THREADS ,demensions, (ave_time_used));
+
+
+    fclose (pFile);
 
     return 0;
 }
