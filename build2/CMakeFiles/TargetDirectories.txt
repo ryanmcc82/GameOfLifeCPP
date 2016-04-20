@@ -1,0 +1,5 @@
+/home/ryanmcc/GoL2/GameOfLifeCPP/build2/CMakeFiles/GOFCpp.dir
+/home/ryanmcc/GoL2/GameOfLifeCPP/build2/CMakeFiles/GOLCpp2D.dir
+/home/ryanmcc/GoL2/GameOfLifeCPP/build2/CMakeFiles/GOLCppReduction.dir
+/home/ryanmcc/GoL2/GameOfLifeCPP/build2/CMakeFiles/GameOfLifeCppContinuous.dir
+/home/ryanmcc/GoL2/GameOfLifeCPP/build2/CMakeFiles/unparallel.dir

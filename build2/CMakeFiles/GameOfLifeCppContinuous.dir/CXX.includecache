@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ryanmcc/GoL2/GameOfLifeCPP/GOFCpp.h
+
+/home/ryanmcc/GoL2/GameOfLifeCPP/continuous.cpp
+GOFCpp.h
+/home/ryanmcc/GoL2/GameOfLifeCPP/GOFCpp.h
+stdbool.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/time.h
+-
+
