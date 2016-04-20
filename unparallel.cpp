@@ -30,6 +30,9 @@ double LIFEPROB = .35;
 bool PRINT = false;
 int demensions = 1000;
 int MAX_LIVES = 100;
+string s = "/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoLSyncResults.txt";
+string filename = s;
+
 
 
 void ClearScreen() //from http://www.cplusplus.com/forum/articles/10515/#msg49080
@@ -240,17 +243,46 @@ pair<double, int> testRun(int fdemensions){
     return result;
 }
 
+int touchFile(const char* filename){
+    if (FILE *file = fopen(filename, "r")) {
+        fclose(file);
+
+    } else {
+        std::ofstream outfile;
+        outfile.open("filename", std::ios_base::app);
+        outfile << "Testing...\n******************************************\n";
+        outfile << "Name,\tTestRun,\tThread #,\tDemensions,\t AverageTime,\n";
+        outfile.close();
+    }
+}
 
 int main(int argc, char *argv[]) {
+
     int test, actualTest = 0;
-    double totalTime;
-    std::cout << "please enter desired number of Test : ";
-    std::cin >> test;
+    int NUM_THREADS;
     int temp_demensions;
-    std::cout << "please enter desired size or 0: ";
-    std::cin >> temp_demensions;
+    double totalTime;
+    if (argc >= 3)
+    {
+
+        NUM_THREADS = atoi(argv[1]);
+        test = atoi(argv[2]);
+        temp_demensions = atoi(argv[3]);
+    }else {
+        std::cout << "please enter desired number of Test : ";
+        std::cin >> test;
+
+        std::cout << "please enter desired size or 0: ";
+        std::cin >> temp_demensions;
+
+    }
     if(temp_demensions != 0){
         demensions = temp_demensions;
+    }
+    if (argc >= 4)
+    {
+        string temp(argv[4]);
+        filename = temp;
     }
 
     pair<double, int> result = testRun(demensions);
@@ -267,10 +299,7 @@ int main(int argc, char *argv[]) {
 
     double ave_time_used = totalTime/(actualTest * MAX_LIVES);
 
-    std::ofstream outfile;
-    outfile.open("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoLSyncResults.txt", std::ios_base::app);
-    outfile << "Testing...\n******************************************\n";
-    outfile.close();
+    touchFile(filename.c_str());
 
     std::cout<<"\n******************************************\n";
 
@@ -281,13 +310,8 @@ int main(int argc, char *argv[]) {
 
     FILE * pFile;
 
-    pFile = fopen ("/home/ryan/Code/cs432_Parallel_C/GameOfLifeCppContiuous/GoLSyncResults.txt","a");
-
-    fprintf(pFile, "%d * %d Game of Life Synchronous For %d threads\n", demensions, demensions, 1);
-    fprintf(pFile,"Name,\tTestRun,\tThread #,\tDemensions,\t AverageTime,\n");
+    pFile = fopen (filename.c_str(),"a");
     fprintf(pFile,"GoSync,\t%d,\t%d,\t%d,\t%f, \n",actualTest ,1 ,demensions, (ave_time_used));
-
-
     fclose (pFile);
 
     return 0;
